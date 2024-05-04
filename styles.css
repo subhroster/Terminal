@@ -1,0 +1,135 @@
+:root {
+    --terminal-bg: #1e1e1e;
+    --terminal-color: #d4d4d4;
+    --terminal-border-radius: 5px;
+    --terminal-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    --terminal-width: 600px;
+    --header-height: 30px;
+    --button-size: 12px;
+    --button-margin: 5px;
+    --button-red: #ff5f56;
+    --button-yellow: #ffbd2e;
+    --button-green: #27c93f;
+    --title-color: #d4d4d4;
+    --content-padding: 20px;
+    --code-container-border-right: 3px solid;
+    --cursor-color: transparent;
+    --cursor-blink-duration: 0.75s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.terminal {
+    width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #252526;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.button.red {
+    background-color: #ff5f56;
+}
+
+.button.yellow {
+    background-color: #ffbd2e;
+}
+
+.button.green {
+    background-color: #27c93f;
+}
+
+.title {
+    flex-grow: 1;
+    color: #d4d4d4;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    display: flex;
+    flex-direction: column;
+}
+
+.rectangle {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    border: 2px solid lime;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slot {
+    flex: 1;
+    border: 2px solid lime;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.appear {
+    opacity: 1;
+}
+
+.code-container {
+    width: 100%;
+    padding: 20px;
+}
+
+#code {
+    white-space: pre-wrap;
+    color: #a6e22e;
+}
+
+.plain-text {
+    margin-top: 20px;
+    color: #a6e22e;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
